@@ -110,7 +110,7 @@ listener.*
 
 *Example in jQuery:*
 
-```
+```javascript
     $('body').on('click', '.element', evt => {
       console.log('clicked');
     })  
@@ -160,7 +160,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 
 *or*
 
-```
+```javascript
   const duplicate = arr => {
     return arr.slice(0).concat(arr.slice(0));
   }
