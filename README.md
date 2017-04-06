@@ -175,12 +175,12 @@ counter(); // 2
 
 *Anonymous functions are typically passed as arguments to other functions, or as callback functions within other functions.  For example:*
 
-```
+```javascript
 setTimeout( () => {
   alert('hi');
 }, 1000)
 ```
-```
+```javascript
 const numbers = [2,4,6];
 const doubled = numbers.map( num => {
   return num *2;
