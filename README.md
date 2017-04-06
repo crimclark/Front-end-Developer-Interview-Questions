@@ -126,6 +126,23 @@ an element with class 'element' is clicked.*
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   * How would you go about checking for any of these states?
+
+*'null' is a representation of no value, meaning a variable has been declared and it has been assigned the value 'null', which represents no value.*
+
+```javascript
+  var a = null;
+  a === null; // true
+```
+
+*'undefined' means a variable has been declared but it has not been assigned a value.*
+
+```javascript
+  var a;
+  typeof a === 'undefined'; // true
+```
+
+*Undeclared means a variable is created without using the 'var' keyword. This places the variable in the global scope. Strict mode will throw an error if you attempt to create an undeclared variable.* 
+
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
@@ -152,7 +169,7 @@ an element with class 'element' is clicked.*
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 
-```
+```javascript
   const duplicate = arr => {
     return [...arr, ...arr];
   }
