@@ -110,9 +110,11 @@ listener*
 
 *Example in jQuery:*
 
+```
     $('body').on('click', '.element', evt => {
       console.log('clicked');
     })  
+```
 
 *In this example, there is an event listener on the body that will fire whenever
 an element with class 'element' is clicked.*  
