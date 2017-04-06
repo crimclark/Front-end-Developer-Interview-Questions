@@ -125,7 +125,7 @@ an element with class 'element' is clicked.*
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 
-*you need to wrap the entire function in parentheses like this: '(function foo(){ })()' otherwise the Javascript engine does not know what you are trying to invoke when you type '()'.*
+*You need to wrap the entire function in parentheses like this: '(function foo(){ })()' otherwise the Javascript engine does not know what you are trying to invoke when you type '()'.*
 
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   * How would you go about checking for any of these states?
@@ -148,7 +148,7 @@ an element with class 'element' is clicked.*
 
 * What is a closure, and how/why would you use one?
 
-*A closure is a function within a function. The closure has access to the outer enclosing functions variables. Closures can be used as "function factories," and as a way to avoid polluting the global scope.*
+*A closure is a function within a function. The closure has access to the outer enclosing function's variables. Closures can be used as "function factories," and as a way to avoid polluting the global scope.*
 
 *For example, a counter function:*
 
@@ -164,14 +164,29 @@ function makeCounter() {
 const counter = makeCounter();
 
 // counter() invokes the inner function of makeCounter
+counter(); // 0
 counter(); // 1
 counter(); // 2
-counter(); // 3
 ```
 
 *In the example above, you can avoid declaring num globally by using a closure.*
 
 * What's a typical use case for anonymous functions?
+
+*Anonymous functions are typically passed as arguments to other functions, or as callback functions within other functions.  For example:
+
+```
+setTimeout( () => {
+  alert('hi');
+}, 1000)
+```
+```
+const numbers = [2,4,6];
+const doubled = numbers.map( num => {
+  return num *2;
+})
+```
+
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
