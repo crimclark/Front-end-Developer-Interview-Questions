@@ -106,7 +106,7 @@ This file contains a number of front-end interview questions that can be used wh
 element in the DOM that will fire for all elements matching a selector. 
 This way you do not have to add multiple event listeners to each child element,
 and you can make sure a child that is dynamically created will have the event 
-listener*  
+listener.*  
 
 *Example in jQuery:*
 
@@ -151,6 +151,21 @@ an element with class 'element' is clicked.*
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+
+```
+  const duplicate = arr => {
+    return [...arr, ...arr];
+  }
+```
+
+*or*
+
+```
+  const duplicate = arr => {
+    return arr.slice(0).concat(arr.slice(0));
+  }
+```
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
