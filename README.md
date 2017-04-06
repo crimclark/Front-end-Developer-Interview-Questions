@@ -173,7 +173,7 @@ counter(); // 2
 
 * What's a typical use case for anonymous functions?
 
-*Anonymous functions are typically passed as arguments to other functions, or as callback functions within other functions.  For example:
+*Anonymous functions are typically passed as arguments to other functions, or as callback functions within other functions.  For example:*
 
 ```
 setTimeout( () => {
