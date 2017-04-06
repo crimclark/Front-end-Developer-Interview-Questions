@@ -101,6 +101,22 @@ This file contains a number of front-end interview questions that can be used wh
 #### JS Questions:
 
 * Explain event delegation
+
+> Event delegation allows you to attach a single event listener to a parent 
+element in the DOM that will fire for all elements matching a selector. 
+This way you do not have to add multiple event listeners to each child element,
+and you can make sure a child that is dynamically created will have the event 
+listener.  
+
+> Example in jQuery:
+
+    $('body').on('click', '.element', evt => {
+      console.log('clicked');
+    })  
+
+> In this example, there is an event listener on the body that will fire whenever
+an element with class 'element' is clicked.  
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
